@@ -9,8 +9,12 @@ app = Flask(__name__)
 @app.route('/')
 def hello():
     """Return a friendly HTTP greeting."""
+    i = int(input("Enter the number of even number: "))
+    t = i * 2
+
     a = []
-    for e in range(1,10,1):
+
+    for e in range(1,t+2,1):
         if (e%2) == 0:
             a.append(e)
     return a
